@@ -1,0 +1,18 @@
+
+<table border=1>
+<tr>
+<td>编号</td>
+<td>用户名</td>
+<td>密码</td>
+<td>角色</td>
+<td>roles</td>
+</tr>
+{% for n in book%}
+<tr>
+<td>{{ n.id }}</td>
+<td>{{ n.user.username }}</td>
+<td>{{ n.user.password }}</td>
+<td>{{ n.rolename }}</td>
+<td>{{ n.userrole.roles }}</td>
+</tr>
+{% endfor %}

@@ -1,0 +1,73 @@
+{% include 'head.html' %}
+<script language="JavaScript" type="text/javascript" src="/static/js/jquery.js"></script>
+<script>
+$(function() {
+	$('#ppselected a').click(function() {
+		var t = $(this).attr('t');
+		$('#ppselected a').each(function(){
+			var tt = $(this).attr('t');
+			$("#"+tt).hide();
+		});
+	   $("#"+t).show();
+	   $("#"+t+" input:radio:first").attr("checked","checked");
+	   $("#ppselected>a").attr("class","xz2");
+	   $(this).removeAttr("class");
+	});
+});
+</script>
+
+	<div class="company-banner"><img src="/static/img/lk-new/news-banner.jpg" /></div>
+    <div class="clear"></div>
+    <div class="company-navbg">
+    	<div class="news-nav">新闻资讯 <span>News</span></div>
+    </div>
+     <div class="clear"></div>
+     <ul class="newsnr">
+     	{% for v in record_list %}
+        <li>
+        	<div class="left"><a href="/news_detail/{{ v.id }}"><img src="/static/img/lk-new/news-pic.jpg" border="0" width="148" height="98"/></a></div>
+            <div class="right">
+            	<div class="titnav"><a href="/news_detail/{{ v.id }}">{{ v.title }}</a></div>
+                <div class="clear"></div>
+                <div class="nrwz">{{ v.content|safe|slice:"200" }}</div>
+                <div class="clear"></div>
+                <div class="more"><a href="/news_detail/{{ v.id }}">查看详情+</a></div>
+            </div>
+       
+        </li>
+		 {% endfor %}
+     
+     </ul> 
+      <div class="fynr">
+          <div class="time-pages1">
+                <ul>		  
+				   <!-- <div class="pagination">
+                        <span class="step-links">
+                             {% if record_list.has_previous %}
+                                 <a href="?page={{ record_list.previous_page_number }}">上一页</a>
+                             {% endif %}
+ 
+                         <span class="current">
+                             第 {{ record_list.number }} 页  
+                         </span>
+                         <span class="current">
+                         共 {{ record_list.paginator.num_pages }} 页
+                         </span>
+ 
+                     {% if record_list.has_next %}
+                             <a href="?page={{ record_list.next_page_number }}">下一页</a>
+                     {% endif %}
+                         </span>
+                 </div>
+             </div>-->
+			 
+			    {% include 'curpage.html' %}
+			 
+			 
+			 
+               </ul>
+       </div>
+  </div>
+  
+    
+     {% include 'footer.html' %}

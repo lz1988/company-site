@@ -1,0 +1,19 @@
+<div class="pagination">
+                        <span class="step-links">
+                             {% if record_list.has_previous %}
+                                 <a href="?page={{ record_list.previous_page_number }}">上一页</a>
+                             {% endif %}
+ 
+                         <span class="current">
+                             第 {{ record_list.number }} 页  
+                         </span>
+                         <span class="current">
+                         共 {{ record_list.paginator.num_pages }} 页
+                         </span>
+ 
+                     {% if record_list.has_next %}
+                             <a href="?page={{ record_list.next_page_number }}">下一页</a>
+                     {% endif %}
+                         </span>
+                 </div>
+             </div>

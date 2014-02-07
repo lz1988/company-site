@@ -1,0 +1,84 @@
+{% include 'head.html' %}
+<script language="JavaScript" type="text/javascript" src="/static/js/jquery.js"></script>
+<script>
+$(function() {
+	$('#ppselected a').click(function() {
+		var t = $(this).attr('t');
+		$('#ppselected a').each(function(){
+			var tt = $(this).attr('t');
+			$("#"+tt).hide();
+		});
+	   $("#"+t).show();
+	   $("#"+t+" input:radio:first").attr("checked","checked");
+	   $("#ppselected>a").attr("class","xz2");
+	   $(this).removeAttr("class");
+	});
+});
+</script>
+	<div class="company-banner"><img src="/static/img/lk-new/about-banner.jpg" /></div>
+    <div class="clear"></div>
+    <div class="company-navbg">
+    	<div id="ppselected" class="companynav">
+             	<a t="pptype_1"  style="cursor: pointer;">关于LoftK</a>
+                <a t="pptype_2" class="xz2"  style="cursor: pointer;">员工风采</a> 
+                <a t="pptype_3" class="xz2"  style="cursor: pointer;">办公环境</a>
+         </div>
+    </div>
+      <div class="clear"></div>
+      <div id="pptype_1">
+      		<div class="gylk-all">
+            	<div class="left"><img src="/static/img/lk-new/about-pic.jpg" /></div>
+                <div class="right">
+                	<p>LoftK是一家经营品牌产品的跨国互联网科技企业，公司中文全称是诺得瀚际电子商务有限公司，专注于把中国制造的优质产品进行品牌管理与市场推广，直销到欧美消费者手中，塑造了一系列的国际性品牌。Loftk集团于2009年在美国加州圣荷西（硅谷）成立，2010年3月公司总部从美国迁移到深圳，经过近年的经营发展，凭借公司良好的企业文化、完善的企业管理体系，全球的客户资源，强大的人才梯队优势，我们已在互联网电子商务行业中形成具有竞争力的产业模式，并在欧美国际市场成功打造出Loftek、Miucolor及MS等有影响力的自有品牌，这些品牌产品已在欧美消费者心中形成了清晰的定位并获得广泛认可。 公司运营中心设在中国深圳，在US,UK,FR等国拥有独立的物流仓储。</p>
+                    <p>Loftk拥有自行研发的强大ERP系统，整合了欧美当地以及国内的主流电子商务渠道，实现了中国产品销售市场本土仓储与物流配送，建立了完善的客户售后服务管理流程，为客户提供方便、快捷、高质量的服务。</p>
+                    <p>Loftk是一个朝气蓬勃、积极向上、富有活力的年轻企业，拥有一批高素质、高效能的职业经理人团队和领先的人才培养理念，我们主张开放式的员工管理模式，倡导快乐工作，绩效导向的管理理念，让员工在轻松、休闲的工作环境中发挥自己的潜能，公司每月定期举办各项活动，提供良好的学习培训平台，作为跨国公司的运营总部，在这里，您将会获得更多的发展机遇、更大的展现自身价值的舞台，我们诚聘高素质人才，通过培训与工作培养，选择优秀的员工，为全球各分支机构输送管理人才。</p>
+                </div>
+            </div>
+      
+      
+      </div>
+      <div id="pptype_2" style="display:none;">
+      		<div class="ygfc-all">
+            	<div class="wz">
+            		<p>这是一个朝气蓬勃、昂扬向上的企业，这里有一群充满朝气、富有活力的年轻人。这里记录了我们的成长，工作让我们提升自己的能力，娱乐活动让我们收获快乐。</p>
+                    <p>我们在这里，寻找自身的价值，发挥青春的光和热。我们每个人手中都有一只画笔，在Loftk这个具有创造力的画纸上，描绘属于青春的画卷。</p>
+                    <p>我们因企业而走向成长，企业因我们而迈向辉煌！</p>    
+                </div>
+            	<div class="picall">
+                	<span><img src="/static/img/lk-new/photo_9.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_1.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_2.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_3.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_4.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_5.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_6.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_7.jpg" width="1000" height="640"/></span>
+                    <span><img src="/static/img/lk-new/photo_8.jpg" width="1000" height="640"/></span>
+                     
+                
+                </div>
+            </div>
+      
+       </div>
+      <div id="pptype_3" style="display:none;">
+      		<div class="ygfc-all">
+            	<div class="wz">
+            		<p> LoftK 集团公司位于深圳美丽的蛇口水湾畔，充满创意气息的绿色写字楼——南海意库。公司外部环境优雅，充满生机。无论是设计还是功能，都极具特色。</p>
+                    <p>公司内部设有会议室、办公室、休息室和娱乐室。环境优雅舒适，营造出轻松、惬意的氛围。</p>
+                    <p>公司注重对员工的关怀，致力于让员工在工作的同时，能够轻松享受办公生活，热爱办公生活，从而收获快乐！</p>    
+                </div>
+            	<div class="picall">
+                	<span><img src="/static/img/lk-new/about_1.jpg" width="1000" height="776"/></span>
+                    <span><img src="/static/img/lk-new/about_2.jpg" width="1000" height="776"/></span>
+                    <span><img src="/static/img/lk-new/about_3.jpg" width="1000" height="776"/></span>
+                    <span><img src="/static/img/lk-new/about_4.jpg" width="1000" height="776"/></span>
+                    <span><img src="/static/img/lk-new/about_5.jpg" width="1000" height="776"/></span>
+                    <span><img src="/static/img/lk-new/about_6.jpg" width="1000" height="776"/></span>
+                </div>
+            </div>
+      
+      </div>
+    
+     <div class="clear"></div>
+    
+    {% include 'footer.html' %}

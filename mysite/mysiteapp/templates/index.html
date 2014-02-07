@@ -1,0 +1,54 @@
+{% include 'head.html' %}
+	 <div id="yc-mod-slider">
+        <div class="wrapper">
+            <div id="slideshow" class="box_skitter fn-clear">
+                <ul>
+                    <li> <img class="cubeRandom" src="/static/img/lk-new/lk-banner1.jpg" /></li>
+                    <li> <img class="cubeRandom" src="/static/img/lk-new/lk-banner2.jpg" /></li>
+                   
+                </ul>
+            </div>
+            <script type="text/javascript" src="/static/js/slideshow.js"></script>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <ul class="center-nr">
+    	<li>
+        	<div class="lk-news">
+            	<div class="topnav"><a href="news">公司新闻</a></div>
+            	<div class="topyw"><a href="news">company news</a></div>
+                <div class="pic"><a href="news"><img src="/static/img/lk-new/lk-news.jpg" border="0" /></a></div>
+                <ul class="newsnr1">
+					{% for v in item_list %}
+					<li><a href="/news_detail/{{ v.id }}">{{ v.title }}</a></li>
+					{% endfor %}
+                </ul>
+                 <div class="more"><a href="#">更多详情+</a></div>
+            </div>
+        </li>
+        <li>
+        	<div class="lk-culture">
+            	<div class="topnav"><a href="culture">企业文化</a></div>
+            	<div class="topyw"><a href="culture">enterprise culture</a></div>
+                <div class="pic"><a href="culture"><img src="/static/img/lk-new/lk-culture.jpg" border="0" /></a></div>
+                <div class="culturenr">
+                	1、心态开放，定位清晰 从根本上讲，我们相信开放和信赖的关系可以让人们建立最好的关系，因为这可以使人们相互信任、保持忠诚。我们非常重视在各个领域里建立深厚的人际关系：和经理们、直接下属、客户（包括内部的和外部的）、供应商、业务伙伴和团队成员。我们相信开放、信赖、有力和积极的人际关...      
+                </div>
+                 <div class="more"><a href="culture">更多详情+</a></div>
+            </div>
+        </li>
+        <li>
+        	<div class="lk-company">
+            	<div class="topnav"><a href="company">公司简介</a></div>
+            	<div class="topyw"><a href="company">company profile</a></div>
+                <div class="pic"><a href="company"><img src="/static/img/lk-new/lk-company.jpg" border="0" /></a></div>
+                <div class="companynr">
+                LoftK是一家经营品牌产品的跨国互联网科技企业，公司中文全称是诺得瀚际电子商务有限公司，专注于把中国制造的优质产品进行品牌管理与市场推广，直销到欧美消费者手中，塑造了一系列的国际性品牌。Loftk集团于2009年在美国加州圣荷西（硅谷）成立，2010年3月公司总部从美国迁移到深圳，经过近年... 
+                </div>
+                 <div class="more"><a href="company">更多详情+</a></div>
+            </div>
+        </li>
+    
+    
+    </ul>
+    {% include 'footer.html' %}

@@ -1,0 +1,1 @@
+<p>You searched for:<strong>{{ query }} </strong></p>{% if mysite %}	<p>Found {{ mysite|length }} name {{ mysite|pluralize }}.</p>	<ul>		{% for name in mysite %}		<li>{{ name.name }}</li>		{% endfor %}	</ul>{% else %}	<p>No name matched your search .</p>{% endif %}

@@ -1,0 +1,37 @@
+{% include 'head.html'%}
+<script>
+$(function() {
+	$('#ppselected a').click(function() {
+		var t = $(this).attr('t');
+		$('#ppselected a').each(function(){
+			var tt = $(this).attr('t');
+			$("#"+tt).hide();
+		});
+	   $("#"+t).show();
+	   $("#"+t+" input:radio:first").attr("checked","checked");
+	   $("#ppselected>a").attr("class","xz2");
+	   $(this).removeAttr("class");
+	});
+});
+</script>
+
+	<div class="company-banner"><img src="/static/img/lk-new/news-banner.jpg" /></div>
+    <div class="clear"></div>
+    <div class="company-navbg">
+    	<div class="news-nav">新闻资讯 <span>News</span></div>
+    </div>
+     <div class="clear"></div>
+    <div class="news-nyall">
+    	<div class="news-nytop">
+        	<h3>{{ news_detail.title }}</h3>
+            <p>{{ news_detail.create_date }}</p>
+        </div>
+        <div class="clear"></div>
+        <div class="news-nynr">
+		{{ news_detail.content|safe }}
+        
+        </div>
+    </div>
+  
+    
+   {% include 'footer.html' %}

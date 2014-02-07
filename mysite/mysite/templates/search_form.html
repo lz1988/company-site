@@ -1,0 +1,1 @@
+<html><head>	<title>Search</title></head><body>	{% if errors %}		<ul>			{% for err in errors %}			<li><font color="red">{{ err }}</font></li>			{% endfor %}		</ul>	{% endif %}	<form action="/search/" method="get">		<input type="text" name="q">		<input type="submit" value="Search">	<form></body></html>

@@ -1,0 +1,22 @@
+﻿<html>
+	<head>
+		<meta charser="utf-8"/>
+		<title>javaplayer</title></head>
+		<script type="text/javascript" src="/static/jwplayer/jwplayer.js"></script>
+		<script src="http://jwpsrv.com/library/22KuwNlxEeKlsRIxOQulpA.js"></script>
+	
+		<body>
+			<div id='my-video'></div>
+			<script type="text/javascript">
+		     	jwplayer('my-video').setup({
+		        file: '/static/jwplayer/one.mp4',
+		        image: '/static/jwplayer/2000.jpg',
+		        width: '480',
+		        height: '270',
+				controlbar: "over",//控制条位置
+				screencolor :"#fff"//播放器颜色
+    });
+	</script>
+	<img src="/static/jwplayer/css/2000.jpg"/>
+		</body>
+</html>
